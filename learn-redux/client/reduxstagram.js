@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
-import { Router, Route, IndexRoute, browserHistory } from "react-router";
+import { Router, Route, IndexRoute } from "react-router";
 
 // helps us to bind redux in react
 import {Provider } from 'react-redux'
@@ -13,6 +13,12 @@ import PhotoGrid from "./components/PhotoGrid";
 
 // import the store
 import store, {history} from './store'
+
+// sentry software import
+import Raven from 'raven-js';
+import {sentry_url} from './data/config';
+
+Raven.config(sentry_url).install();
 
 // REDUX: we are gonna save the state nor in a component, but into a redux store
 

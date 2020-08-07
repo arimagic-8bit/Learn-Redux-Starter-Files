@@ -1,4 +1,8 @@
+
 import Raven from 'raven-js';
+
+// SENTRY config
+// software to track errors from users
 
 const sentry_key = 'cb55d4f05cd443ce82303222f77ef5e0';
 const sentry_app = '61499';
